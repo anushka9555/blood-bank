@@ -1,5 +1,7 @@
-import React,{useState} from 'react'
-import InputType from './InputType'
+import React,{useState} from 'react';
+import InputType from './InputType';
+import { Link } from 'react-router-dom';
+import { handleLogin, handleRegister } from '../../../services/authService';
 
 const Form = ({formType ,submitBtn,formTitle}) => {
     const [email,setEmail]=useState("");
@@ -13,11 +15,17 @@ const Form = ({formType ,submitBtn,formTitle}) => {
     const [phone,setPhone]=useState("");
     
   return (
-    <div><h1>
-        <form>
+    <div>
+        <form onSubmit={(e)=>{
+            if(formType==='login') return  handleLogin(e,email,password,role)
+            else if(formType === 'register') return handleRegister(e,name,role,email,password,
+        organisationName,hospitalName,
+        website,address,phone);
+
+        }}>
             <h1 className="text-center">{formTitle}</h1>
             <hr/>
-            <div className="d-flex mb-3">
+            <div className="d-flex mb-3 ">
                 <div className="form-check ">
                     <input type="radio" 
                     className="form-check-input" name ="role"
@@ -121,10 +129,6 @@ const Form = ({formType ,submitBtn,formTitle}) => {
                 )
             }
             
-            
-
-           
-
             <InputType labelText={'email'}
              labelFor={'ForEmail'} 
              inputType={'email'}
@@ -165,14 +169,22 @@ const Form = ({formType ,submitBtn,formTitle}) => {
             }
            })()}
 
-          
-        <div className="d-flex">
+        <div className="d-flex flex-row justify-content-between">
+            {formType==='login' ? (
+                <p>Not registered yet ? Register
+                    <Link to ="/register "> Here !</Link>
+                    </p>
+            ):(
+                <p>Already User Please
+                    <Link to ="/login "> Login !</Link>
+                    </p>
+            )}
 <button className="btn btn-primary" type="submit">
     {submitBtn}
 </button>
         </div>
         </form>
-        </h1></div>
+        </div>
   )
 }
 

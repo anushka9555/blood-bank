@@ -21,7 +21,8 @@ app.use('/api/v1/test',require('./routes/testRoutes'));
 app.use('/api/v1/auth',require('./routes/authRoutes'));
 app.use('/api/v1/inventory',require('./routes/inventoryRoutes'));
 //port
-const PORT = process.env.PORT||3000;
+const PORT = process.env.PORT || 5000;
+
  // Using process.env.PORT for Heroku deployment compatibility
 //listen 
 app.listen(PORT, () => {
