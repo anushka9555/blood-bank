@@ -27,15 +27,6 @@ Integrated an analytics page that shows real-time data on the amount of blood av
 **Server:** Node, Express, MongoDB
 
 
-## Installation
-
-Install blood-bank with npm
-
-```bash
-  npm install 
-  npm run dev
-  
-```
     
 ## Demo Snapshots
 
