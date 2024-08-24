@@ -37,9 +37,20 @@ Install blood-bank with npm
   
 ```
     
-## Demo
+## Demo Snapshots
 
-Insert gif or link to demo
+![image](https://github.com/user-attachments/assets/6467ef11-91a2-481c-9b12-ce93f037a3a6)
+
+![image](https://github.com/user-attachments/assets/f128444e-50b5-42ae-a2f6-0051a3e138cd)
+
+![image](https://github.com/user-attachments/assets/4a4985f1-11b1-45bc-9a29-9a9515cfff5f)
+
+
+## Video Demo
+
+https://github.com/user-attachments/assets/ae020597-2893-4fac-981b-c0d888c4a817
+
+
 
 
 ## Authors
